@@ -3,21 +3,16 @@
 
   var root = document.documentElement;
   var themeToggle = document.getElementById("theme-toggle");
-  var navToggle = document.getElementById("nav-toggle");
-  var navMenu = document.getElementById("nav-menu");
   var yearEl = document.getElementById("year");
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
 
-  // Theme: system preference, then localStorage override
   var stored = null;
   try {
     stored = localStorage.getItem("theme");
-  } catch (e) {
-    /* ignore */
-  }
+  } catch (e) {}
 
   var prefersDark =
     window.matchMedia &&
@@ -31,9 +26,7 @@
       setTheme(next);
       try {
         localStorage.setItem("theme", next);
-      } catch (e) {
-        /* ignore */
-      }
+      } catch (e) {}
     });
   }
 
@@ -47,70 +40,18 @@
     }
   }
 
-  // Mobile nav
-  if (navToggle && navMenu) {
-    navToggle.addEventListener("click", function () {
-      var open = navMenu.classList.toggle("is-open");
-      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-
-    navMenu.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navMenu.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  // Active section highlighting
-  var sections = document.querySelectorAll("main section[id]");
-  var navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-
-  function updateActiveNav() {
-    var scrollY = window.scrollY + 100;
-    var current = "";
-    sections.forEach(function (section) {
-      if (section.offsetTop <= scrollY) {
-        current = section.id;
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      var id = link.getAttribute("href");
+      if (!id || id === "#") return;
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.classList.add("flash");
+        window.setTimeout(function () {
+          target.classList.remove("flash");
+        }, 600);
       }
     });
-    navLinks.forEach(function (link) {
-      var href = link.getAttribute("href");
-      if (href === "#" + current) {
-        link.setAttribute("aria-current", "true");
-      } else {
-        link.removeAttribute("aria-current");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", updateActiveNav, { passive: true });
-  updateActiveNav();
-
-  // Scroll reveal
-  var reduceMotion =
-    window.matchMedia &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (!reduceMotion && "IntersectionObserver" in window) {
-    var reveals = document.querySelectorAll(".reveal");
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
-    );
-    reveals.forEach(function (el) {
-      observer.observe(el);
-    });
-  } else {
-    document.querySelectorAll(".reveal").forEach(function (el) {
-      el.classList.add("is-visible");
-    });
-  }
+  });
 })();
