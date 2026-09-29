@@ -1,45 +1,51 @@
 # Angelo Solsona — Portfolio
 
-Personal site for [Angelo Solsona](https://github.com/solsonaM). Live at [solsonaM.github.io](https://solsonaM.github.io).
+Single-page developer portfolio for [Angelo Solsona](https://github.com/solsonaM).
 
-Single-page static site: HTML, CSS, and a small amount of JavaScript. No build step, no paid services.
+**Live site:** https://solsonaM.github.io
 
-## Sections
+## Structure
 
-Hero, About, Projects, Skills, Leadership, Contact.
+```text
+.
+├── index.html      # Entire site (one page)
+├── css/styles.css
+├── js/main.js
+├── assets/         # Optional photo / favicon
+└── README.md
+```
 
-Featured projects: [RepoGuard](https://github.com/solsonaM/RepoGuard) and [Barangay SAGIP](https://github.com/solsonaM/Barangay-SAGIP).
+No build step. Plain HTML, CSS, and JavaScript.
 
 ## Local preview
 
-Open `index.html` in a browser, or from this directory:
+Open `index.html` in a browser, or from this folder:
 
 ```bash
-python3 -m http.server 8080
+python -m http.server 8080
 ```
 
 Then visit `http://localhost:8080`.
 
-## GitHub Pages
+## Deploy on GitHub Pages
 
-This repository is a user site. GitHub serves the `main` branch root at `https://solsonaM.github.io`.
+This repo is named `solsonaM.github.io` so GitHub serves it as a user site from the default branch.
 
-If the site does not appear after the first push:
+1. Push to `main` on https://github.com/solsonaM/solsonaM.github.io
+2. Settings → Pages → Source: **Deploy from a branch** → `main` / `/ (root)`
+3. After a minute, open https://solsonaM.github.io
 
-1. Open **Settings → Pages**
-2. Source: **Deploy from a branch**
-3. Branch: `main` / `/ (root)`
-4. Save
+## Customize
 
-HTTPS is automatic. Updates go live a minute or two after each push to `main`.
+| Item | Where |
+|------|--------|
+| Email | Already set to `angelosolsona.work@gmail.com` |
+| LinkedIn | `#contact` placeholder in `index.html` |
+| COO impact bullets | Leadership section in `index.html` |
+| Photo | Add under `assets/` and link from hero if desired |
+| Theme default | `data-theme` on `<html>` + `localStorage` key `theme` |
 
-## Files
+## Privacy
 
-```text
-index.html
-404.html
-css/styles.css
-js/main.js
-favicon.svg
-README.md
-```
+- Private projects appear only as high-level blurbs (no file names, code, or internals).
+- No API keys or secrets in this repo.
