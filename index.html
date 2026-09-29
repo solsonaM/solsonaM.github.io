@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Angelo Solsona</title>
+    <meta
+      name="description"
+      content="Portfolio of Angelo Solsona, a 3rd-year Computer Science student at Catanduanes State University. Web development, security tooling, and civic software."
+    />
+    <meta name="theme-color" content="#0b0d0c" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=Syne:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "light"
+                : "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top">
+          <span class="mark" aria-hidden="true">AS</span>
+          <span class="brand-name">Angelo Solsona</span>
+        </a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a class="icon-btn" href="https://github.com/solsonaM" aria-label="GitHub profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4" />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </a>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme">
+            <span class="icon-swap">
+              <svg data-icon="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+              </svg>
+              <svg class="is-off" data-icon="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
+            </span>
+          </button>
+          <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+            <span class="icon-swap">
+              <svg data-icon="menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg class="is-off" data-icon="close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-nav" class="wrap nav-mobile" aria-label="Mobile">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="wrap hero-inner stagger">
+          <p class="kicker">CatSU · CS · Philippines</p>
+          <h1>Angelo<br />Solsona</h1>
+          <p class="lede">CS student building tools for safer software and smarter local services.</p>
+          <p class="seeking">Open to internships · Web · ML · Security</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-ghost" href="https://github.com/solsonaM">GitHub</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal" aria-labelledby="about-title">
+        <div class="wrap">
+          <header class="section-head">
+            <h2 id="about-title">About</h2>
+            <span class="section-index">01</span>
+          </header>
+          <div class="about-grid">
+            <div class="prose">
+              <p>
+                I’m Angelo Solsona, a 3rd-year BS Computer Science student at Catanduanes State University. I build things I can defend in an interview: a pre-install GitHub scanner, a barangay emergency-response platform, and research on assistive communication.
+              </p>
+              <p>
+                As COO of the Vanguard Society, I help run a student organization tied to the CS programs. I’m looking for internships and entry-level roles in web development, machine learning, and security.
+              </p>
+            </div>
+            <aside class="panel">
+              <dl class="facts">
+                <div>
+                  <dt>Study</dt>
+                  <dd>BS Computer Science, CatSU</dd>
+                </div>
+                <div>
+                  <dt>Year</dt>
+                  <dd>3rd year</dd>
+                </div>
+                <div>
+                  <dt>Role</dt>
+                  <dd>COO, Vanguard Society</dd>
+                </div>
+                <div>
+                  <dt>Seeking</dt>
+                  <dd>Internships & entry-level roles</dd>
+                </div>
+              </dl>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-alt reveal" aria-labelledby="projects-title">
+        <div class="wrap">
+          <header class="section-head">
+            <h2 id="projects-title">Projects</h2>
+            <span class="section-index">02</span>
+          </header>
+          <div class="project-list">
+            <article class="panel project">
+              <div class="badges">
+                <span class="badge">Featured</span>
+                <span class="eyebrow">Security tooling</span>
+              </div>
+              <h3>RepoGuard</h3>
+              <p><strong>Problem.</strong> People install GitHub repositories and AI skills without knowing if they hide malware or leaked secrets.</p>
+              <p>A pre-install scanner that fetches a public GitHub repo at an exact commit and statically analyzes it. Target code is never installed, imported, or executed. The only verdicts are APPROVED or REJECTED, with per-file findings. Secrets are redacted before they are stored in reports.</p>
+              <p><strong>Role.</strong> Sole developer</p>
+              <ul class="chips" aria-label="RepoGuard tech stack">
+                <li class="chip">Python</li>
+                <li class="chip">Semgrep</li>
+                <li class="chip">Gitleaks</li>
+                <li class="chip">YARA</li>
+                <li class="chip">OSV-Scanner</li>
+                <li class="chip">Docker</li>
+                <li class="chip">Cloudflare Workers</li>
+                <li class="chip">GitHub Actions</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-ghost btn-sm" href="https://github.com/solsonaM/RepoGuard">Repository</a>
+                <span class="muted-chip">Demo · Local / self-hosted</span>
+              </div>
+            </article>
+
+            <article class="panel project">
+              <div class="badges">
+                <span class="badge">Featured</span>
+                <span class="eyebrow">Civic web platform</span>
+              </div>
+              <h3>Barangay SAGIP</h3>
+              <p><strong>Problem.</strong> Barangay offices still handle assistance and emergencies without consistent classification or responder assignment.</p>
+              <p>A Laravel platform for resident assistance requests, maps, notifications, dashboards, and reports. A private FastAPI service classifies request type and urgency with tokenization and curated rules — not machine learning — then scores nearby responders. Ambiguous or low-confidence cases go to human review.</p>
+              <p><strong>Role.</strong> Sole developer</p>
+              <ul class="chips" aria-label="Barangay SAGIP tech stack">
+                <li class="chip">PHP</li>
+                <li class="chip">Laravel</li>
+                <li class="chip">FastAPI</li>
+                <li class="chip">Python</li>
+                <li class="chip">MySQL / PostgreSQL</li>
+                <li class="chip">Tailwind CSS</li>
+                <li class="chip">Vite</li>
+                <li class="chip">Leaflet</li>
+                <li class="chip">Docker</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-ghost btn-sm" href="https://github.com/solsonaM/Barangay-SAGIP">Repository</a>
+                <span class="muted-chip">Demo · Local demo</span>
+              </div>
+            </article>
+
+            <article class="panel project">
+              <div class="badges">
+                <span class="eyebrow">Private research prototype</span>
+              </div>
+              <h3>Eye-gaze AAC</h3>
+              <p><strong>Problem.</strong> Some deaf users can communicate only with their eyes, and dedicated eye trackers are expensive.</p>
+              <p>A research prototype that uses a webcam so a person can select phrases by looking, then show captions and speak them aloud. Private thesis work — no public repository.</p>
+              <p><strong>Role.</strong> Sole developer</p>
+              <ul class="chips" aria-label="Eye-gaze AAC tech stack">
+                <li class="chip">Python</li>
+                <li class="chip">JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <span class="muted-chip">Private repository</span>
+                <span class="muted-chip">Demo · Private</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section reveal" aria-labelledby="skills-title">
+        <div class="wrap">
+          <header class="section-head">
+            <h2 id="skills-title">Skills</h2>
+            <span class="section-index">03</span>
+          </header>
+          <div class="skill-grid">
+            <section class="panel skill-card">
+              <h3>Languages</h3>
+              <ul class="chips">
+                <li class="chip">Python</li>
+                <li class="chip">PHP</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">HTML/CSS</li>
+                <li class="chip">SQL</li>
+              </ul>
+            </section>
+            <section class="panel skill-card">
+              <h3>Web</h3>
+              <ul class="chips">
+                <li class="chip">Laravel</li>
+                <li class="chip">FastAPI</li>
+                <li class="chip">Tailwind CSS</li>
+                <li class="chip">Vite</li>
+                <li class="chip">Leaflet</li>
+                <li class="chip">Cloudflare Workers</li>
+              </ul>
+            </section>
+            <section class="panel skill-card">
+              <h3>Tools</h3>
+              <ul class="chips">
+                <li class="chip">Git</li>
+                <li class="chip">Docker</li>
+                <li class="chip">GitHub Actions</li>
+                <li class="chip">pytest</li>
+                <li class="chip">PHPUnit</li>
+                <li class="chip">Semgrep</li>
+                <li class="chip">Gitleaks</li>
+                <li class="chip">YARA</li>
+              </ul>
+            </section>
+            <section class="panel skill-card">
+              <h3>Concepts</h3>
+              <ul class="chips">
+                <li class="chip">Static analysis</li>
+                <li class="chip">Secret scanning</li>
+                <li class="chip">Rule-based classification</li>
+                <li class="chip">Emergency-response systems</li>
+                <li class="chip">Accessibility</li>
+                <li class="chip">Maps</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="leadership" class="section section-alt reveal" aria-labelledby="leadership-title">
+        <div class="wrap">
+          <header class="section-head">
+            <h2 id="leadership-title">Leadership</h2>
+            <span class="section-index">04</span>
+          </header>
+          <article class="panel lead-card">
+            <p class="eyebrow">Student organization</p>
+            <h3>COO, Vanguard Society</h3>
+            <p>A student organization tied to the Computer Science programs at Catanduanes State University.</p>
+            <ul>
+              <li><span class="dot" aria-hidden="true"></span> Coordinate day-to-day operations. (placeholder — replace with a real impact line)</li>
+              <li><span class="dot" aria-hidden="true"></span> Support CS-related student programs and events. (placeholder — replace with a real impact line)</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal" aria-labelledby="contact-title">
+        <div class="wrap">
+          <header class="section-head">
+            <h2 id="contact-title">Contact</h2>
+            <span class="section-index">05</span>
+          </header>
+          <p class="contact-intro">I read every note. The fastest way to reach me is email.</p>
+          <ul class="contact-grid">
+            <li>
+              <a class="panel contact-card" href="mailto:angelosolsona.work@gmail.com">
+                <span class="eyebrow">Email</span>
+                <span>angelosolsona.work@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a class="panel contact-card" href="https://github.com/solsonaM">
+                <span class="eyebrow">GitHub</span>
+                <span>solsonaM</span>
+              </a>
+            </li>
+            <li>
+              <div class="panel contact-card">
+                <span class="eyebrow">LinkedIn</span>
+                <span>Profile coming soon</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span data-year></span> Angelo Solsona</p>
+        <p>Catanduanes State University · Philippines</p>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
