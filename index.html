@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Angelo Solsona — CS student building tools for safer software and smarter local services. Portfolio." />
+  <meta name="description" content="Angelo Solsona — CS student building tools for safer software and smarter local services." />
   <meta name="author" content="Angelo Solsona" />
   <meta name="theme-color" content="#0b0f14" />
   <title>Angelo Solsona — Portfolio</title>
@@ -15,243 +15,142 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="Angelo Solsona home">AS</a>
+  <div class="frame">
+    <header class="site-header">
+      <a class="logo" href="#" aria-label="Angelo Solsona">AS</a>
       <nav class="nav" aria-label="Primary">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
-          <span class="sr-only">Menu</span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-        </button>
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#leadership">Leadership</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to light theme">
-        <span class="theme-icon" aria-hidden="true"></span>
-      </button>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero section" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">BS Computer Science · Catanduanes State University</p>
-          <h1 id="hero-title">Angelo Solsona</h1>
-          <p class="tagline">CS student building tools for safer software and smarter local services.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-ghost" href="https://github.com/solsonaM" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="btn btn-ghost" href="#contact">Contact</a>
-          </div>
-        </div>
-        <div class="hero-aside reveal" aria-hidden="true">
-          <div class="hero-card">
-            <p class="mono label">Focus</p>
-            <ul class="focus-list">
-              <li>Web development</li>
-              <li>Security tooling</li>
-              <li>Applied research</li>
-            </ul>
-            <p class="mono label mt">Seeking</p>
-            <p class="seeking">Internships &amp; entry-level roles</p>
-          </div>
-        </div>
+      <div class="header-actions">
+        <a class="ghost-link" href="https://github.com/solsonaM" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to light theme">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
       </div>
-    </section>
+    </header>
 
-    <section class="section about" id="about" aria-labelledby="about-title">
-      <div class="container narrow">
-        <h2 id="about-title" class="section-title reveal">About</h2>
-        <p class="lead reveal">
-          I’m Angelo Solsona, a 3rd-year BS Computer Science student at Catanduanes State University.
-          I build things I can defend in an interview: a pre-install GitHub scanner, a barangay
-          emergency-response platform, and research on assistive communication. As COO of the
-          Vanguard Society, I help run a student organization tied to the CS programs. I’m looking
-          for internships and entry-level roles in web development, machine learning, and security.
+    <main id="main" class="board">
+      <section class="panel hero" id="top" aria-labelledby="hero-title">
+        <p class="eyebrow">BS CS · CatSU · 3rd year</p>
+        <h1 id="hero-title">Angelo Solsona</h1>
+        <p class="tagline">CS student building tools for safer software and smarter local services.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Projects</a>
+          <a class="btn btn-ghost" href="https://github.com/solsonaM" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
+        </div>
+        <ul class="chips" aria-label="Focus areas">
+          <li>Web</li>
+          <li>Security</li>
+          <li>Research</li>
+          <li>Internships</li>
+        </ul>
+      </section>
+
+      <section class="panel about" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <p>
+          3rd-year BS Computer Science student at Catanduanes State University.
+          I build work I can defend in interviews: a pre-install GitHub scanner,
+          a barangay emergency platform, and assistive-communication research.
+          COO of the Vanguard Society (CS student org). Seeking internships and
+          entry-level roles in web development, ML, and security.
         </p>
-      </div>
-    </section>
+      </section>
 
-    <section class="section projects" id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <h2 id="projects-title" class="section-title reveal">Projects</h2>
-        <p class="section-intro reveal">Featured work from public repositories. Descriptions match the code and READMEs — no invented features.</p>
-
-        <div class="project-grid">
-          <article class="project-card featured reveal">
-            <div class="project-meta">
+      <section class="panel projects" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <div class="project-row">
+          <article class="project">
+            <div class="project-head">
+              <h3>RepoGuard</h3>
               <span class="badge">Featured</span>
-              <span class="badge badge-muted">Security</span>
             </div>
-            <h3>RepoGuard</h3>
-            <p class="problem"><strong>Problem:</strong> People install GitHub repos and AI skills without knowing if they hide malware or leaked secrets.</p>
-            <p>Fetches a public repository at an exact commit and statically scans it. Target code is never installed, imported, or executed. Verdict is only APPROVED or REJECTED, with per-file findings. Secrets are redacted in reports.</p>
-            <p class="role"><span class="mono">Role</span> Sole developer</p>
-            <ul class="stack" aria-label="Tech stack">
-              <li>Python</li>
-              <li>Semgrep</li>
-              <li>Gitleaks</li>
-              <li>YARA</li>
-              <li>OSV-Scanner</li>
-              <li>Docker</li>
-              <li>Cloudflare Workers</li>
-              <li>GitHub Actions</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/solsonaM/RepoGuard" target="_blank" rel="noopener noreferrer">Repository</a>
-              <span class="link-disabled" title="No public hosted demo yet">Local / self-hosted</span>
-            </div>
+            <p class="problem"><strong>Problem:</strong> Repos and AI skills can hide malware or secrets.</p>
+            <p>Static pre-install scan at an exact commit. No target code executed. APPROVED or REJECTED only.</p>
+            <p class="meta"><span>Sole developer</span> · Python · Semgrep · Gitleaks · YARA · OSV · Docker · Workers</p>
+            <a href="https://github.com/solsonaM/RepoGuard" target="_blank" rel="noopener noreferrer">Repository</a>
           </article>
-
-          <article class="project-card featured reveal">
-            <div class="project-meta">
+          <article class="project">
+            <div class="project-head">
+              <h3>Barangay SAGIP</h3>
               <span class="badge">Featured</span>
-              <span class="badge badge-muted">Civic / Web</span>
             </div>
-            <h3>Barangay SAGIP</h3>
-            <p class="problem"><strong>Problem:</strong> Barangay offices still handle assistance and emergencies without consistent classification or responder assignment.</p>
-            <p>Residents submit requests; a rule-based tokenizer classifies type and urgency, scores nearby responders, and escalates ambiguous cases for human review. Includes maps, personnel, notifications, dashboards, and reports.</p>
-            <p class="role"><span class="mono">Role</span> Sole developer</p>
-            <ul class="stack" aria-label="Tech stack">
-              <li>PHP</li>
-              <li>Laravel</li>
-              <li>FastAPI</li>
-              <li>Python</li>
-              <li>MySQL / PostgreSQL</li>
-              <li>Tailwind CSS</li>
-              <li>Vite</li>
-              <li>Leaflet</li>
-              <li>Docker</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/solsonaM/Barangay-SAGIP" target="_blank" rel="noopener noreferrer">Repository</a>
-              <span class="link-disabled" title="No public hosted demo yet">Local demo</span>
-            </div>
+            <p class="problem"><strong>Problem:</strong> Barangays lack consistent emergency classification and assignment.</p>
+            <p>Rule-based tokenizer classifies requests and scores responders; low confidence goes to human review.</p>
+            <p class="meta"><span>Sole developer</span> · Laravel · FastAPI · PHP · Python · Leaflet · Docker</p>
+            <a href="https://github.com/solsonaM/Barangay-SAGIP" target="_blank" rel="noopener noreferrer">Repository</a>
           </article>
-
-          <article class="project-card reveal">
-            <div class="project-meta">
-              <span class="badge badge-muted">Private · Research</span>
-              <span class="badge badge-muted">Accessibility</span>
+          <article class="project">
+            <div class="project-head">
+              <h3>Eye-gaze AAC</h3>
+              <span class="badge muted">Private</span>
             </div>
-            <h3>Eye-gaze AAC</h3>
-            <p class="problem"><strong>Problem:</strong> Some deaf users can communicate only with their eyes, and dedicated eye trackers are expensive.</p>
-            <p>A research prototype that uses a webcam so a person can select phrases by looking, then show captions and speak them aloud. Thesis work on making gaze-based selection more reliable.</p>
-            <p class="role"><span class="mono">Role</span> Sole developer (thesis prototype)</p>
-            <ul class="stack" aria-label="Tech stack">
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>Browser prototype</li>
-            </ul>
-            <div class="project-links">
-              <span class="link-disabled">Private — no public repository</span>
-            </div>
+            <p class="problem"><strong>Problem:</strong> Eye-only communication is costly with dedicated trackers.</p>
+            <p>Webcam prototype: select phrases by gaze, then captions and speech. Thesis research prototype.</p>
+            <p class="meta"><span>Sole developer</span> · Python · JavaScript</p>
+            <span class="muted-text">No public repository</span>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section skills" id="skills" aria-labelledby="skills-title">
-      <div class="container">
-        <h2 id="skills-title" class="section-title reveal">Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-group reveal">
-            <h3 class="mono">Languages</h3>
-            <ul>
-              <li>Python</li>
-              <li>PHP</li>
-              <li>JavaScript</li>
-              <li>HTML / CSS</li>
-              <li>SQL</li>
-            </ul>
+      <section class="panel skills" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <div class="skill-grid">
+          <div>
+            <h3>Languages</h3>
+            <p>Python · PHP · JavaScript · HTML/CSS · SQL</p>
           </div>
-          <div class="skill-group reveal">
-            <h3 class="mono">Web</h3>
-            <ul>
-              <li>Laravel</li>
-              <li>FastAPI</li>
-              <li>Tailwind CSS</li>
-              <li>Vite</li>
-              <li>Leaflet</li>
-              <li>Cloudflare Workers</li>
-            </ul>
+          <div>
+            <h3>Web</h3>
+            <p>Laravel · FastAPI · Tailwind · Vite · Leaflet · Workers</p>
           </div>
-          <div class="skill-group reveal">
-            <h3 class="mono">Tools</h3>
-            <ul>
-              <li>Git</li>
-              <li>Docker</li>
-              <li>GitHub Actions</li>
-              <li>pytest</li>
-              <li>PHPUnit</li>
-              <li>Semgrep · Gitleaks · YARA</li>
-            </ul>
+          <div>
+            <h3>Tools</h3>
+            <p>Git · Docker · Actions · pytest · PHPUnit · Semgrep · Gitleaks · YARA</p>
           </div>
-          <div class="skill-group reveal">
-            <h3 class="mono">Concepts</h3>
-            <ul>
-              <li>Static analysis</li>
-              <li>Secret scanning</li>
-              <li>Rule-based classification</li>
-              <li>Emergency-response systems</li>
-              <li>Accessibility</li>
-              <li>Maps / GIS</li>
-            </ul>
+          <div>
+            <h3>Concepts</h3>
+            <p>Static analysis · Secrets · Rule-based classification · Emergency systems · Accessibility</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section leadership" id="leadership" aria-labelledby="leadership-title">
-      <div class="container narrow">
-        <h2 id="leadership-title" class="section-title reveal">Leadership</h2>
-        <article class="leadership-card reveal">
-          <h3>COO, Vanguard Society</h3>
-          <p class="muted">Student organization tied to the CS programs at Catanduanes State University</p>
-          <ul>
-            <li>Coordinate day-to-day operations for the organization.</li>
-            <li>Support CS-related student programs and events.</li>
-          </ul>
-          <p class="note">Impact bullets are placeholders — replace with specific outcomes when ready.</p>
-        </article>
-      </div>
-    </section>
+      <section class="panel leadership" id="leadership" aria-labelledby="leadership-title">
+        <h2 id="leadership-title">Leadership</h2>
+        <h3>COO, Vanguard Society</h3>
+        <p class="muted-text">Student org tied to CatSU CS programs</p>
+        <ul>
+          <li>Coordinate day-to-day operations.</li>
+          <li>Support CS-related student programs and events.</li>
+        </ul>
+        <p class="note">Replace with specific impact when ready.</p>
+      </section>
 
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="container narrow">
-        <h2 id="contact-title" class="section-title reveal">Contact</h2>
-        <p class="lead reveal">Open to internships and entry-level roles. Reach out by email or GitHub.</p>
-        <ul class="contact-list reveal">
+      <section class="panel contact" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <ul class="contact-list">
           <li>
-            <span class="mono">Email</span>
+            <span>Email</span>
             <a href="mailto:angelosolsona.work@gmail.com">angelosolsona.work@gmail.com</a>
           </li>
           <li>
-            <span class="mono">GitHub</span>
-            <a href="https://github.com/solsonaM" target="_blank" rel="noopener noreferrer">github.com/solsonaM</a>
+            <span>GitHub</span>
+            <a href="https://github.com/solsonaM" target="_blank" rel="noopener noreferrer">solsonaM</a>
           </li>
           <li>
-            <span class="mono">LinkedIn</span>
-            <span class="placeholder">Add your LinkedIn URL</span>
+            <span>LinkedIn</span>
+            <em>Add URL</em>
           </li>
         </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Angelo Solsona</p>
-      <a href="#top">Back to top</a>
-    </div>
-  </footer>
+        <p class="footer-line">© <span id="year"></span> Angelo Solsona</p>
+      </section>
+    </main>
+  </div>
 
   <script src="js/main.js" defer></script>
 </body>
