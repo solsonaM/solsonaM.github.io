@@ -34,13 +34,4 @@
       }
     });
   });
-  (function () {
-    var img = document.getElementById("hero-img");
-    if (!img) return;
-    Promise.all([0,1,2,3].map(function (i) {
-      return fetch("assets/p" + i + ".b64").then(function (r) { return r.text(); });
-    })).then(function (parts) {
-      img.src = "data:image/jpeg;base64," + parts.map(function (p) { return p.trim(); }).join("");
-    }).catch(function () {});
-  })();
 })();
