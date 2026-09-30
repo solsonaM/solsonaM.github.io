@@ -55,3 +55,15 @@
     });
   });
 })();
+
+  // Load portrait from base64 asset
+  (function () {
+    var img = document.getElementById("hero-img");
+    if (!img) return;
+    fetch("assets/photo.b64")
+      .then(function (r) { return r.text(); })
+      .then(function (b64) {
+        img.src = "data:image/jpeg;base64," + b64.trim();
+      })
+      .catch(function () {});
+  })();
