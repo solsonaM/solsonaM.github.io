@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Angelo Solsona — CS student building tools for safer software and smarter local services." />
   <meta name="author" content="Angelo Solsona" />
-  <meta name="theme-color" content="#0b0f14" />
+  <meta name="theme-color" content="#0a0c12" />
   <title>Angelo Solsona — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,9 +15,12 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="frame">
-    <header class="site-header">
-      <a class="logo" href="#" aria-label="Angelo Solsona">AS</a>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Angelo Solsona home">
+        <span class="brand-mark">AS</span>
+        <span class="brand-text">Angelo Solsona</span>
+      </a>
       <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -25,33 +28,59 @@
         <a href="#leadership">Leadership</a>
         <a href="#contact">Contact</a>
       </nav>
-      <div class="header-actions">
-        <a class="ghost-link" href="https://github.com/solsonaM" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to light theme">
+      <div class="top-actions">
+        <a class="ghost" href="https://github.com/solsonaM" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <button class="theme-btn" type="button" id="theme-toggle" aria-label="Switch to light theme">
           <span class="theme-icon" aria-hidden="true"></span>
         </button>
       </div>
     </header>
 
-    <main id="main" class="board">
-      <section class="panel hero" id="top" aria-labelledby="hero-title">
-        <p class="eyebrow">BS CS · CatSU · 3rd year</p>
-        <h1 id="hero-title">Angelo Solsona</h1>
-        <p class="tagline">CS student building tools for safer software and smarter local services.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Projects</a>
-          <a class="btn btn-ghost" href="https://github.com/solsonaM" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="btn btn-ghost" href="#contact">Contact</a>
+    <main id="main" class="layout">
+      <section class="card hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">BS CS · CatSU · 3rd year</p>
+          <h1 id="hero-title">Angelo Solsona</h1>
+          <p class="tagline">CS student building tools for safer software and smarter local services.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-ghost" href="https://github.com/solsonaM" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
+          </div>
+          <ul class="pills" aria-label="Focus areas">
+            <li>Web</li>
+            <li>Security</li>
+            <li>Research</li>
+            <li>Internships</li>
+          </ul>
         </div>
-        <ul class="chips" aria-label="Focus areas">
-          <li>Web</li>
-          <li>Security</li>
-          <li>Research</li>
-          <li>Internships</li>
-        </ul>
+        <div class="hero-photo-wrap">
+          <img
+            class="hero-photo"
+            src="assets/angelo.jpg"
+            width="360"
+            height="480"
+            alt="Professional portrait of Angelo Solsona"
+          />
+          <div class="hero-stats" aria-label="Highlights">
+            <div class="stat">
+              <span class="stat-val">3</span>
+              <span class="stat-lbl">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-val">COO</span>
+              <span class="stat-lbl">Vanguard</span>
+            </div>
+            <div class="stat">
+              <span class="stat-val">CS</span>
+              <span class="stat-lbl">3rd year</span>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="panel about" id="about" aria-labelledby="about-title">
+      <section class="card about" id="about" aria-labelledby="about-title">
         <h2 id="about-title">About</h2>
         <p>
           3rd-year BS Computer Science student at Catanduanes State University.
@@ -62,10 +91,12 @@
         </p>
       </section>
 
-      <section class="panel projects" id="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Projects</h2>
-        <div class="project-row">
-          <article class="project">
+      <section class="card projects" id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <h2 id="projects-title">Projects</h2>
+        </div>
+        <div class="project-list">
+          <article class="project glass-inner">
             <div class="project-head">
               <h3>RepoGuard</h3>
               <span class="badge">Featured</span>
@@ -73,9 +104,9 @@
             <p class="problem"><strong>Problem:</strong> Repos and AI skills can hide malware or secrets.</p>
             <p>Static pre-install scan at an exact commit. No target code executed. APPROVED or REJECTED only.</p>
             <p class="meta"><span>Sole developer</span> · Python · Semgrep · Gitleaks · YARA · OSV · Docker · Workers</p>
-            <a href="https://github.com/solsonaM/RepoGuard" target="_blank" rel="noopener noreferrer">Repository</a>
+            <a href="https://github.com/solsonaM/RepoGuard" target="_blank" rel="noopener noreferrer">Repository →</a>
           </article>
-          <article class="project">
+          <article class="project glass-inner">
             <div class="project-head">
               <h3>Barangay SAGIP</h3>
               <span class="badge">Featured</span>
@@ -83,9 +114,9 @@
             <p class="problem"><strong>Problem:</strong> Barangays lack consistent emergency classification and assignment.</p>
             <p>Rule-based tokenizer classifies requests and scores responders; low confidence goes to human review.</p>
             <p class="meta"><span>Sole developer</span> · Laravel · FastAPI · PHP · Python · Leaflet · Docker</p>
-            <a href="https://github.com/solsonaM/Barangay-SAGIP" target="_blank" rel="noopener noreferrer">Repository</a>
+            <a href="https://github.com/solsonaM/Barangay-SAGIP" target="_blank" rel="noopener noreferrer">Repository →</a>
           </article>
-          <article class="project">
+          <article class="project glass-inner">
             <div class="project-head">
               <h3>Eye-gaze AAC</h3>
               <span class="badge muted">Private</span>
@@ -93,12 +124,12 @@
             <p class="problem"><strong>Problem:</strong> Eye-only communication is costly with dedicated trackers.</p>
             <p>Webcam prototype: select phrases by gaze, then captions and speech. Thesis research prototype.</p>
             <p class="meta"><span>Sole developer</span> · Python · JavaScript</p>
-            <span class="muted-text">No public repository</span>
+            <span class="muted">No public repository</span>
           </article>
         </div>
       </section>
 
-      <section class="panel skills" id="skills" aria-labelledby="skills-title">
+      <section class="card skills" id="skills" aria-labelledby="skills-title">
         <h2 id="skills-title">Skills</h2>
         <div class="skill-grid">
           <div>
@@ -120,10 +151,10 @@
         </div>
       </section>
 
-      <section class="panel leadership" id="leadership" aria-labelledby="leadership-title">
+      <section class="card leadership" id="leadership" aria-labelledby="leadership-title">
         <h2 id="leadership-title">Leadership</h2>
         <h3>COO, Vanguard Society</h3>
-        <p class="muted-text">Student org tied to CatSU CS programs</p>
+        <p class="muted">Student org tied to CatSU CS programs</p>
         <ul>
           <li>Coordinate day-to-day operations.</li>
           <li>Support CS-related student programs and events.</li>
@@ -131,7 +162,7 @@
         <p class="note">Replace with specific impact when ready.</p>
       </section>
 
-      <section class="panel contact" id="contact" aria-labelledby="contact-title">
+      <section class="card contact" id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">Contact</h2>
         <ul class="contact-list">
           <li>
