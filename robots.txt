@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://solsonaM.github.io/sitemap.xml
+Sitemap: https://solsonam.github.io/sitemap.xml
