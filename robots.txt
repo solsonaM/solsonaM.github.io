@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://solsonaM.github.io/sitemap.xml
